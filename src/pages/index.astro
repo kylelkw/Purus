@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="flex flex-col justify-center items-center h-screen">
 						<div class="absolute overflow flex left-0 top-0 justify-center bg-bg w-full h-auto border-b-2">
 							<!-- <h1 class="text-4xl text-center">A better way to stay organized</h1> -->
-							<div class="line opacity-0 md:opacity-100 gen-text flex flex-row gap-2 text-xl justify-center items-center my-10">
+							<div class="line opacity-0 md:opacity-100 gen-text flex flex-row gap-2 text-4xl justify-center items-center my-10">
 								<div class="word">Purify your life with PURUS</div>
 								<!-- <div class="word">A</div>
 								<div class="word">better</div>
@@ -276,24 +276,24 @@ if (window.innerWidth > 768){
 
 //Type Effect
 
-// let typeSplit = new SplitType('.gen-text', {
-//   types: 'lines, words, chars',
-//   tagName: 'span'
-// })
+ let typeSplit = new SplitType('.gen-text', {
+   types: 'lines, words, chars',
+   tagName: 'span'
+ })
 
-// gsap.from('.gen-text .word', {
-//   y: '100%',
-//   opacity: 0,
-//   duration: 0.5,
-//   ease: 'power1.out',
-//   stagger: 0.1,
+ gsap.from('.gen-text .word', {
+   y: '100%',
+   opacity: 0,
+   duration: 0.5,
+   ease: 'power1.out',
+   stagger: 0.1,
   
-//   scrollTrigger: {
-//     trigger: '.gen-text',
-//     start: 'top center',
+   scrollTrigger: {
+     trigger: '.gen-text',
+     start: 'top center',
     
-//   }
-// })
+   }
+ })
 
 </script>
 <script>
