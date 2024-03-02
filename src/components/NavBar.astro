@@ -1,0 +1,95 @@
+---
+
+---
+<link rel="stylesheet" href="../style/global.css">
+<div class="sticky top-0 left-0 z-50">
+    <div class="absolute flex flex-row justify-between w-screen px-20 py-10">
+        <div data-nav="false" class="nav-text text-4xl cursor-pointer ease-linear duration-100 hover:scale-125 active:scale-95">
+            <a href="/">PURUS</a>
+        </div>
+        <div class="flex justify-between ease-linear duration-300">
+            <div data-nav="false" class="group toggle-menu relative h-10 w-10 rounded-full bg-black cursor-pointer ease-linear duration-100 hover:scale-125 active:scale-95">
+                <div class="open absolute w-10 h-10 left-1 top-1 ease-linear duration-150">
+                    <svg class= width="2rem" height="2rem" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 10L11 10M5 10H7" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M5 18H13M19 18H17" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M19 14L5 14" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+                        <path d="M19 6L5 6" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="close absolute w-10 h-10 left-1.5 top-1 opacity-0 ease-linear duration-150">
+                    <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L11 7.33333M9 19L15 12L13.5 10.25" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <a href="/contact/#content-form">
+        <div class="hidden md:flex absolute top-96 w-10 h-60 bg-content-1 rounded-r-full justify-center items-center">
+            <div class="flex gap-3 text-white text-lg sideways">
+                <div>Apply </div>
+                <div> — </div>
+                <div> Now</div>
+            </div>
+        </div>
+    </a>
+</div>
+
+<style>
+.sideways {
+    text-orientation: sideways-right;
+    writing-mode: vertical-rl; 
+}
+.open {
+    opacity:0;
+}
+.toggle-menu[data-nav="false"]:hover >.open{
+    opacity:1;
+}
+.toggle-menu[data-nav="true"]>.close{
+    opacity:1;
+}
+.toggle-menu[data-nav="true"]{
+    background-color: white;
+}
+@media (min-width: 768px){
+.toggle-menu[data-nav="true"]{
+    background-color: white;
+    transform: translateX(-450%) scale(150%); 
+    transition:500ms cubic-bezier(.13,.53,.38,.97)
+}
+.toggle-menu[data-nav="true"]:hover{
+    transform: translateX(-450%) scale(175%);
+}
+.toggle-menu[data-nav="true"]:active{
+    transform: translateX(-450%) scale(125%);
+}
+}
+.toggle-menu[data-nav="false"]{
+    transition:500ms cubic-bezier(.13,.53,.38,.97)
+}
+.nav-text[data-nav="true"]{
+    color:white;
+    /* transform: translateX(-875%) scale(150%); 
+    transition:400ms cubic-bezier(.13,.53,.38,.97) */
+}
+.nav-text[data-nav="false"]{
+    transition:400ms cubic-bezier(.13,.53,.38,.97)
+}
+
+
+</style>
+<script>
+    const navBar = document.querySelector(".nav-text");
+    const menuToggle = document.querySelector(".toggle-menu");
+    const menuItems = document.querySelector(".menu");
+    menuToggle.addEventListener("click", () => {
+        menuToggle.dataset.nav = menuToggle.dataset.nav === "true" ? "false" : "true";
+        navBar.dataset.nav = navBar.dataset.nav === "true" ? "false" : "true";
+        menuItems.dataset.nav = menuItems.dataset.nav === "true" ? "false" : "true";
+        document.querySelector("html").dataset.nav = document.querySelector("html").dataset.nav === "true" ? "false" : "true";
+    });
+</script>

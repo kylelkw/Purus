@@ -1,0 +1,282 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { gsap } from "gsap/dist/gsap"
+---
+
+<Layout title="About">
+    <div id="page-container" class="z-30 min-h-screen min-w-screen">
+        <div id="page-container-inner" class="">
+
+            <section id="about-hero" class="relative bg-bg h-screen w-screen border-4">
+                <div class="absolute flex left-0 top-0 justify-center bg-bg w-full h-auto border-b-2 z-40">
+                    <div class="hidden md:flex gen-text line flex-row gap-2 text-4xl justify-center items-center py-10">
+                        <div class="word">About Our Team</div>
+                    </div>
+                </div>
+				<div class="absolute justify-around items-start w-full h-screen">
+					<div class="flex justify-center items-center h-full w-full p-10 md:p-20">
+						<div class="flex flex-col justify-end items-start h-full w-full gap-y-10">
+							<div class="gen-text line-main flex flex-row text-content-1 justify-between">
+								<div class="word-main word">WE ARE PURUS</div>
+							</div>
+							<div class="overflow">
+								<div class="line-main flex flex-row h-20 w-96 text-content-1 justify-between items-center">
+									<!-- <div class="absolute flex justify-center items-center h-full w-20 -translate-x-20">
+										<div class="bg-accent-4 h-7 w-7 rounded-full"> </div>
+									</div> -->
+                                    <div class="gen-text h-full">
+                                        <div class="text-lg md:text-5xl word px-1 h-16">A team set on purifying your life, so you don't have to!</div>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </section>
+            <div class="horizontal flex h-screen z-20 bg-bg">
+                <section id="about-section" class="hidden md:block h-screen w-screen">
+                    <div class="h-full w-full px-20 flex justify-between">
+                        <div class="gen-text flex flex-col justify-center items-start h-full w-full text-sm md:text-8xl z-20">
+                            <div data-speed="-0.05" class="parallax-x text-center text-content-1 z-40 word h-28"> Purus is a helpful and </div>
+                            <div data-speed="-0.1" class="parallax-x text-center text-content-1 z-40 word h-28"> innovative note-taking </div>
+                            <div data-speed="-0.15" class="parallax-x text-center text-content-1 z-40 word h-28"> application dedicated </div>
+                            <div data-speed="-0.20" class="parallax-x text-center text-content-1 z-40 word h-28"> to helping users </div>
+                            <div data-speed="-0.25" class="parallax-x text-center text-content-1 z-40 word h-28"> organize and clean up </div>
+                            <div data-speed="-0.30" class="parallax-x text-center text-content-1 z-40 word h-28"> their messy plans. </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section id="about-section" class="hidden md:block h-screen w-screen z-0">
+                    <div class="h-full w-full px-20 flex justify-between">
+                        <div class="gen-text flex flex-col justify-center items-start h-full w-full text-sm md:text-8xl -translate-x-96 z-10">
+                            <div data-speed="-0.05" class="parallax-x text-center text-content-1 z-40 word h-28"> We encourage creativity, </div>
+                            <div data-speed="-0.1" class="parallax-x text-center text-content-1 z-40 word h-28"> curiosity, and continuous </div>
+                            <div data-speed="-0.15" class="parallax-x text-center text-content-1 z-40 word h-28">  improvement in our </div>
+                            <div data-speed="-0.2" class="parallax-x text-center text-content-1 z-40 word h-28"> pursuit of excellence. </div>
+                            <div data-speed="-0.25" class="parallax-x text-center text-content-1 z-40 word h-28"> Ensuring a pleasant </div>
+                            <div data-speed="-0.3" class="parallax-x text-center text-content-1 z-40 word h-28"> experience for all. </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="about-section" class="h-screen w-screen">
+                    <div class="card-two team-items flex flex-col justify-center items-start h-screen w-full text-md md:text-8xl p-10 md:p-20">
+                        <div class="team-title text-center text-content-1 z-40 word h-28 text-2xl md:text-8xl"> TEAM </div>
+                        <div class="text-center text-content-1 z-40 word h-10 md:h-28"> </div>
+                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> GRAPHICS DESIGN </a></div>
+                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> MEDIA CORDINATION </a></div>
+                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> USER EXPERIENCE </a></div>
+                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> SOFTWARE DEVELOPMENT </a></div>
+                    </div>
+                </section>
+            </div>
+            <section id="about-staff" class="relative flex flex-col justify-center bg-bg h-screen w-screen z-30">
+                <svg class="hidden md:block squiggle absolute -top-36 z-0" stroke="hsl(var(--color-accent3)/1)" stroke-linecap="round" stroke-width="30" stroke-linecap="round" viewBox="150 -10 1300 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 144C8.33333 138.333 182.763 109.87 198 84.9998C288.391 -62.5318 403.5 145.5 511.5 46.5C619.5 -52.5 779.145 50.7475 926 125.5C1010.06 168.286 1100.04 105.075 1113 198.5C1122.5 267 1171 283 1135.5 339.5C1100 396 1076.5 354 968 342C859.5 330 711.072 187.38 511.5 169C444.807 162.858 390.549 201.979 332 234.5C258.527 275.31 246.5 432 246.5 432C246.5 432 245.394 540.818 280 596.5C345.602 702.055 491.5 712.5 584.5 689C658.9 670.2 762 624.5 775 532C790.028 425.071 1021.15 370.413 1048 475C1076.5 586 1043 824.5 1145 783.5C1247 742.5 1432.17 618.167 1527.5 624.5"/>
+                </svg>
+                <div class="flex flex-col h-full w-full p-5 md:p-20 gap-10">
+                    <div class="flex justify-center items-center bg-bg border-2 border-content-1 rounded-2xl h-56 w-full z-30">
+                        <div class="word text-2xl md:text-8xl">Values and Benefits</div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-10 h-full w-full z-30">
+                        <div class="bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
+                            <div class="flex flex-col w-full h-full justify-between items-start">
+                                <div class="word text-2xl md:text-5xl">Feedback</div>
+                                <div class="text-lg md:text-2xl"> Purus is committed to creating a community where employees are encouraged to share ideas and contribute to the continuous improvement of the platform. Sharing ideas with the community can be refined to the best version possible.</div>
+                            </div>
+                        </div>
+                        <div class="bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
+                            <div class="flex flex-col w-full h-full justify-between items-start">
+                                <div class="word text-2xl md:text-5xl">Balance</div>
+                                <div class="text-lg md:text-2xl"> The company places a strong emphasis on work-life balance, offering flexible schedules and remote work options to accommodate individual needs. Purus also prioritizes professional development, providing opportunities for skill improvement and career growth.</div>
+                            </div>
+                        </div>
+                        <div class="bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
+                            <div class="flex flex-col w-full h-full justify-between items-start">
+                                <div class="word text-2xl md:text-5xl">Nurture</div>
+                                <div class="text-lg md:text-2xl"> As employees advance in the company, they earn additional vacation days. Furthermore, health insurance coverage is provided to all employees, safeguarding them against unforeseen and costly medical expenses, thus supporting their hard work and dedication. </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="page-extra" class="relative w-screen h-96 bg-gray-50 z-40">
+            <div id="footer-main" class="w-full h-full">
+                <div class="flex justify-start ml-10 md:ml-0 md:justify-center items-center w-full h-full p-20">
+                    <div class="flex w-1/2 h-full justify-evenly items-center gap-20 text-md md:text-2xl">
+                        <div class="flex flex-col w-full h-full justify start items start p-2">
+                            <a href="https://twitter.com/purushq"><div class="word">Twitter / X</div></a>
+                            <a href="https://www.instagram.com/purushq/"><div class="word">Instagram</div></a>
+                            <a href="https://www.linkedin.com/in/purus-undefined-3809552b7/"><div class="word">Linkedin</div></a>
+                        </div>
+                        <div class="flex flex-col w-full h-full start items start p-2">
+                            <div class="word">Email Contact</div>
+                            <a href="mailto: PURUS1029@GMAIL.COM"><div class="word">PURUS1029@GMAIL.COM</div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-bottom" class="absolute bottom-0 left-0 w-full h-20 border-2">
+                <div class="flex justify-evenly items-center w-full h-full text-md md:text-2xl">
+                    <div>2023 PURUS</div>
+                    <div>Note PURUS is not a real company</div>
+                    <div>Built By PURUS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+<script>
+import SplitType from 'split-type';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { TextPlugin } from "gsap/TextPlugin";
+gsap.registerPlugin(TextPlugin)
+gsap.registerPlugin(ScrollTrigger);
+const accent2 = window.getComputedStyle(document.documentElement).getPropertyValue('--color-accent2');
+gsap.to(".parallax", {
+  scrollTrigger: {
+    scrub: true
+  }, 
+  y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+  ease: "none"
+});
+gsap.to(".parallax-x", {
+  scrollTrigger: {
+    scrub: true
+  }, 
+  x: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+  ease: "none"
+});
+let sections = gsap.utils.toArray("#about-section");
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".horizontal",
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + window.innerWidth * sections.length
+  }
+})
+//Text Effect
+let typeSplit = new SplitType('.gen-text', {
+  types: 'lines, words, chars',
+  tagName: 'span'
+})
+
+gsap.from('.gen-text .word', {
+  y: '130%',
+  opacity: 1,
+  duration: 0.5,
+  ease: 'power1.out',
+  stagger: 0.08,
+  
+  scrollTrigger: {
+    trigger: '.gen-text',
+    start: 'top center',
+    
+  }
+})
+
+</script>
+<script>
+    const svg = document.querySelector('svg.squiggle')
+    const path = svg.querySelector('path')
+    
+    const scroll = () => {
+      const distance = window.scrollY + 980
+      const totalDistance = svg.clientHeight
+    
+      const percentage = distance / totalDistance
+      const pathLength = path.getTotalLength()
+    
+      path.style.strokeDasharray = `${pathLength}`
+      path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`
+    }
+    
+    scroll()
+    window.addEventListener('scroll', scroll)
+    
+</script>
+<style>
+html {
+  /* scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  min-width:100%; */
+  /* overflow-x:hidden; */
+}
+#about-section{
+    /* scroll-snap-align: start;
+    scroll-snap-type: y mandatory; */
+    height:100vh;
+}
+.overflow {
+    overflow: hidden;
+}
+.demo{
+	height: 90vh;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card {
+	height: 100%;
+	width: 100%;
+	background-color: hsl(var(--color-bg)/1);
+	border-radius: 5rem;
+    border-width: 2px;
+        border-width: 2px;
+    border-color: hsl(var(--color-content-1)/1);
+}
+.gen-text{
+}
+.word{
+    overflow: hidden;
+}
+.horizontal {
+    width: 100vw;
+}
+.line-main {
+	width: 100%;
+	line-height: 1;
+}
+.line-sub {
+	font-size:4rem;
+}
+.word-main {
+	font-size:1.5rem;
+	font-weight: 500;
+}
+.word-sub {
+
+}
+.team-item {
+    transition:500ms cubic-bezier(.13,.53,.38,.97);
+}
+.team-items {
+    transition:500ms cubic-bezier(.13,.53,.38,.97);
+}
+.team-items:hover > .team-item {
+    opacity: 0.3;
+}
+.team-items:hover > .team-item:hover {
+    opacity: 1;
+}
+#about-staff{
+    height:250vh
+}
+@media (min-width: 768px){
+.word-main {
+	font-size:8rem;
+	font-weight: 500;
+}
+.horizontal {
+    width: 300vw;
+}
+#about-staff{
+    height:100vh
+}
+}
+</style>
