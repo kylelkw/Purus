@@ -27,9 +27,9 @@ import '../styles/global.css';
 	<NavBar />
 		<div data-nav="false" class="menu sticky flex justify-end top-0 right-0">
 			<div class="menu-items absolute flex flex-col justify-center items-end cursor-pointer h-screen text-center duration-500 w-screen text-6xl">
-				<div class="menu-item"><a href="/"><h1>Home</h1></a></div>
-				<div class="menu-item"><a href="/about">About</a></div>
-				<div class="menu-item"><a href="/contact">Contact</a></div>
+				<div class="menu-item min-w-0.5"><a href="/">Home</a></div>
+				<div class="menu-item min-w-0.5"><a href="/about">About</a></div>
+				<div class="menu-item min-w-0.5"><a href="/contact">Contact</a></div>
 			</div>
 			<!-- <div class="z-10 menu-bg absolute top-0 w-screen" /> -->
 		</div>
@@ -56,12 +56,13 @@ import '../styles/global.css';
 		/* font-family: "Quicksand", sans-serif; */
 		/* font-family: "Nunito", sans-serif; */
 		font-family: "Montserrat", sans-serif;
-		font-optical-sizing: auto;
+		font-size:62.5%;
 		font-weight: 500;
 		font-style: normal;
 		scroll-behavior: smooth;
 		text-decoration:none!important;
 	}
+	
 	html[data-nav="false"]{
 		overflow-x:hidden;
 	}
@@ -131,6 +132,9 @@ import '../styles/global.css';
 	}
 	}
 	@media (min-width: 768px){
+	html{
+		font-size:100%;
+	}
 	html[data-nav="true"] > body > main {
 		transform: translateX(-20%);
 		filter: brightness(50%);
@@ -140,5 +144,12 @@ import '../styles/global.css';
 		
 	}
 	}
+	@media not all and (min-resolution:.001dpcm) { @media {
+
+.safari_only { 
+	font-size:62.5%;
+
+}
+}}
 </style>
 
