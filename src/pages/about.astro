@@ -8,16 +8,11 @@ import { gsap } from "gsap/dist/gsap"
         <div id="page-container-inner" class="">
 
             <section id="about-hero" class="relative bg-bg h-screen w-screen border-4">
-                <div class="absolute flex left-0 top-0 justify-center bg-bg w-full h-auto border-b-2 z-40">
-                    <div class="hidden md:flex gen-text line flex-row gap-2 text-4xl justify-center items-center py-10">
-                        <div class="word">About Our Team</div>
-                    </div>
-                </div>
 				<div class="absolute justify-around items-start w-full h-screen">
 					<div class="flex justify-center items-center h-full w-full p-10 md:p-20">
-						<div class="flex flex-col justify-end items-start h-full w-full gap-y-10">
+						<div class="word flex flex-col justify-end items-start h-full w-full gap-y-10">
 							<div class="gen-text line-main flex flex-row text-content-1 justify-between">
-								<div class="word-main word">WE ARE PURUS</div>
+								<div class="text-6xl text-large">WE ARE PURUS</div>
 							</div>
 							<div class="overflow">
 								<div class="line-main flex flex-row h-20 w-96 text-content-1 justify-between items-center">
@@ -25,7 +20,7 @@ import { gsap } from "gsap/dist/gsap"
 										<div class="bg-accent-4 h-7 w-7 rounded-full"> </div>
 									</div> -->
                                     <div class="gen-text h-full">
-                                        <div class="text-lg md:text-5xl word px-1 h-16">A team set on purifying your life, so you don't have to!</div>
+                                        <div class="text-lg md:text-5xl px-1 h-16">A team set on purifying your life, so you don't have to!</div>
                                     </div>
 								</div>
 							</div>
@@ -36,7 +31,7 @@ import { gsap } from "gsap/dist/gsap"
             <div class="horizontal flex h-screen z-20 bg-bg">
                 <section id="about-section" class="hidden md:block h-screen w-screen">
                     <div class="h-full w-full px-20 flex justify-between">
-                        <div class="gen-text flex flex-col justify-center items-start h-full w-full text-sm md:text-4xl lg:text-8xl z-20">
+                        <div class="flex flex-col justify-center items-start h-full w-full text-sm md:text-4xl lg:text-8xl z-20">
                             <div data-speed="-0.05" class="parallax-x text-center text-content-1 z-40 word h-28"> Purus is a helpful and </div>
                             <div data-speed="-0.1" class="parallax-x text-center text-content-1 z-40 word h-28"> innovative note-taking </div>
                             <div data-speed="-0.15" class="parallax-x text-center text-content-1 z-40 word h-28"> application dedicated </div>
@@ -49,7 +44,7 @@ import { gsap } from "gsap/dist/gsap"
                 </section>
                 <section id="about-section" class="hidden md:block h-screen w-screen z-0">
                     <div class="h-full w-full px-20 flex justify-between">
-                        <div class="gen-text flex flex-col justify-center items-start h-full w-full text-sm md:text-6xl lg:text-8xl -translate-x-96 z-10">
+                        <div class="flex flex-col justify-center items-start h-full w-full text-sm md:text-6xl lg:text-8xl -translate-x-96 z-10">
                             <div data-speed="-0.05" class="parallax-x text-center text-content-1 z-40 word h-28"> We encourage creativity, </div>
                             <div data-speed="-0.1" class="parallax-x text-center text-content-1 z-40 word h-28"> curiosity, and continuous </div>
                             <div data-speed="-0.15" class="parallax-x text-center text-content-1 z-40 word h-28">  improvement in our </div>
@@ -60,46 +55,48 @@ import { gsap } from "gsap/dist/gsap"
                     </div>
                 </section>
                 <section id="about-section" class="h-screen w-screen">
-                    <div class="card-two team-items flex flex-col justify-center items-start h-screen w-full text-md md:text-xl lg:text-8xl p-10 md:p-20">
-                        <div class="team-title text-center text-content-1 z-40 word h-28 text-2xl md:text-8xl"> TEAM </div>
+                    <div class="card-two team-items flex flex-col justify-center items-start h-screen w-full text-4xl md:text-xl lg:text-8xl p-10 md:p-20">
+                        <div class="team-title word text-center text-content-1 z-40 word h-28 text-6xl md:text-8xl"> TEAM </div>
                         <div class="text-center text-content-1 z-40 word h-10 md:h-28"> </div>
-                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> GRAPHICS DESIGN </a></div>
-                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> MEDIA CORDINATION </a></div>
-                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> USER EXPERIENCE </a></div>
-                        <div class="team-item text-center text-content-1 z-40 word h-28"><a href=""> SOFTWARE DEVELOPMENT </a></div>
+                        <div class="team-item word text-center text-content-1 z-40 word h-28"><a href=""> GRAPHICS DESIGN </a></div>
+                        <div class="team-item word text-center text-content-1 z-40 word h-28"><a href=""> MEDIA CORDINATION </a></div>
+                        <div class="team-item word text-center text-content-1 z-40 word h-28"><a href=""> USER EXPERIENCE </a></div>
+                        <div class="team-item word text-center text-content-1 z-40 word h-28"><a href=""> SOFTWARE DEVELOPMENT </a></div>
                     </div>
                 </section>
             </div>
+
             <section id="about-staff" class="relative flex flex-col justify-center bg-bg h-screen w-screen z-30">
                 <svg class="hidden md:block squiggle absolute -top-36 z-0" stroke="hsl(var(--color-accent3)/1)" stroke-linecap="round" stroke-width="30" stroke-linecap="round" viewBox="150 -10 1300 900" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.5 144C8.33333 138.333 182.763 109.87 198 84.9998C288.391 -62.5318 403.5 145.5 511.5 46.5C619.5 -52.5 779.145 50.7475 926 125.5C1010.06 168.286 1100.04 105.075 1113 198.5C1122.5 267 1171 283 1135.5 339.5C1100 396 1076.5 354 968 342C859.5 330 711.072 187.38 511.5 169C444.807 162.858 390.549 201.979 332 234.5C258.527 275.31 246.5 432 246.5 432C246.5 432 245.394 540.818 280 596.5C345.602 702.055 491.5 712.5 584.5 689C658.9 670.2 762 624.5 775 532C790.028 425.071 1021.15 370.413 1048 475C1076.5 586 1043 824.5 1145 783.5C1247 742.5 1432.17 618.167 1527.5 624.5"/>
                 </svg>
-                <div class="flex flex-col h-full w-full p-5 md:p-20 gap-10">
+                <main class="flex flex-col h-full w-full p-5 md:p-20 gap-10">
                     <div class="flex justify-center items-center bg-bg border-2 border-content-1 rounded-2xl h-56 w-full z-30">
-                        <div class="word text-2xl md:text-8xl">Values and Benefits</div>
+                        <h1 class="word text-2xl md:text-8xl">Values and Benefits</h1>
                     </div>
-                    <div class="flex flex-col md:flex-row gap-10 h-full w-full z-30">
-                        <div class="bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
+                    <article class="flex flex-col md:flex-row gap-10 h-full w-full z-30">
+                        <div id="card" class="bg-accent-1 md:bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
                             <div class="flex flex-col w-full h-full justify-between items-start">
-                                <div class="word text-2xl md:text-5xl">Feedback</div>
-                                <div class="text-lg md:text-2xl"> Purus is committed to creating a community where employees are encouraged to share ideas and contribute to the continuous improvement of the platform. Sharing ideas with the community can be refined to the best version possible.</div>
+                                <h1 class="word text-5xl md:text-accent-1">Feedback</h1>
+                                <p class="word text-lg md:text-2xl"> Purus is committed to creating a community where employees are encouraged to share ideas and contribute to the continuous improvement of the platform. Sharing ideas with the community can be refined to the best version possible.</p>
                             </div>
                         </div>
-                        <div class="bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
+                        <div id="card" class="bg-accent-2 md:bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
                             <div class="flex flex-col w-full h-full justify-between items-start">
-                                <div class="word text-2xl md:text-5xl">Balance</div>
-                                <div class="text-lg md:text-2xl"> The company places a strong emphasis on work-life balance, offering flexible schedules and remote work options to accommodate individual needs. Purus also prioritizes professional development, providing opportunities for skill improvement and career growth.</div>
+                                <h1 class="word text-5xl md:text-accent-2">Balance</h1>
+                                <p class="word text-lg md:text-2xl"> The company places a strong emphasis on work-life balance, offering flexible schedules and remote work options to accommodate individual needs. Purus also prioritizes professional development, providing opportunities for skill improvement and career growth.</p>
                             </div>
                         </div>
-                        <div class="bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
+                        <div id="card" class="bg-accent-3 md:bg-bg border-2 border-content-1 rounded-2xl h-full w-full p-10">
                             <div class="flex flex-col w-full h-full justify-between items-start">
-                                <div class="word text-2xl md:text-5xl">Nurture</div>
-                                <div class="text-lg md:text-2xl"> As employees advance in the company, they earn additional vacation days. Furthermore, health insurance coverage is provided to all employees, safeguarding them against unforeseen and costly medical expenses, thus supporting their hard work and dedication. </div>
+                                <h1 class="word text-5xl md:text-accent-3">Nurture</h1>
+                                <p class="word text-lg md:text-2xl"> As employees advance in the company, they earn additional vacation days. Furthermore, health insurance coverage is provided to all employees, safeguarding them against unforeseen and costly medical expenses, thus supporting their hard work and dedication. </p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
+                </main>
             </section>
+
         </div>
         <div id="page-extra" class="relative w-screen h-96 bg-gray-50 z-40">
             <div id="footer-main" class="w-full h-full">
@@ -160,26 +157,29 @@ gsap.to(sections, {
     end: () => "+=" + window.innerWidth * sections.length
   }
 })
+
 //Text Effect
-let typeSplit = new SplitType('.gen-text', {
-  types: 'lines, words, chars',
-  tagName: 'span'
-})
+function setupSplits() {
+  const targets = gsap.utils.toArray(".word");
+  targets.forEach((target) => {
+    let SplitClient = new SplitType(target, { type: "words" });
+    let chars = SplitClient.chars; //an array of all the divs that wrap each character
+    gsap.from(chars, {
+		y: '100%',
+		opacity: 0,
+		duration: 0.5,
+		ease: 'power1.out',
+		stagger: 0.03,
+      	scrollTrigger: {
+			trigger: target,
+			start: "top 75%",
+			end: "bottom center",
+      	}
+    });
+  });
+}
 
-gsap.from('.gen-text .word', {
-  y: '130%',
-  opacity: 1,
-  duration: 0.5,
-  ease: 'power1.out',
-  stagger: 0.08,
-  
-  scrollTrigger: {
-    trigger: '.gen-text',
-    start: 'top center',
-    
-  }
-})
-
+setupSplits();
 </script>
 <script>
     const svg = document.querySelector('svg.squiggle')
@@ -243,10 +243,10 @@ html {
 	line-height: 1;
 }
 .line-sub {
-	font-size:4rem;
+	font-size: 4rem;
 }
 .word-main {
-	font-size:1.5rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 }
 .word-sub {
@@ -274,6 +274,10 @@ html {
 }
 .horizontal {
     width: 300vw;
+}
+.text-large{
+    font-size: 10rem;
+    line-height:0.9;
 }
 #about-staff{
     height:100vh

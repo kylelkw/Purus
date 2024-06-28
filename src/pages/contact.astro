@@ -1,156 +1,218 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PositionCard from '../components/PositionCard.astro';
+import FormLine from '../components/FormLine.astro';
 ---
 
 <Layout title="Contact">
     <div id="page-container" class="z-30 min-h-screen min-w-screen">
         <div id="page-container-inner" class="">
             <section id="contact-hero" class="relative bg-bg h-screen w-screen border-2">
-                <div class="absolute flex left-0 top-0 justify-center bg-bg w-full h-auto border-b-2 z-40">
-                    <div class="hidden md:flex gen-text line flex-row gap-2 text-4xl justify-center items-center py-10">
+                <header class="absolute flex left-0 top-0 justify-center bg-bg w-full h-auto border-b-2 z-40">
+                    <div class="hidden md:flex  line flex-row gap-2 text-4xl justify-center items-center py-10">
                         <div class="word">Contact Us</div>
                     </div>
-                </div>
-				<div class="absolute justify-around items-start w-screen h-screen">
+                </header>
+				<main class="absolute justify-around items-start w-screen h-screen">
 					<div class="flex justify-center items-center h-full w-full md:p-20">
 						<div class="flex flex-col justify-center items-center h-full w-full gap-y-4 pt-28">
-                            <div class="flex w-full justify-between h-52">
-                                <div class="flex flex-grow justify-center items-center border-2 border-content-1 px-10 word-main word"> We </div><div class="flex flex-grow border-2 border-content-1 p-10"></div><div class="flex flex-grow justify-center items-center border-2 border-content-1 p-10 word-main word bg-accent-2 text-bg"> Search </div><div class="flex flex-grow border-2 border-content-1 p-10"></div>
+                            <div id="line" class="flex w-full h-52">
+                                <p class="flex flex-grow justify-center items-center text-center border-2 border-content-1 px-3 md:px-10 word-main word"> We </p><div class="flex flex-grow border-2 border-content-1 p-10" /><p class="flex flex-grow justify-center items-center border-2 border-content-1 px-3 md:px-10 word-main word bg-accent-2 text-bg text-center"> Search </p><div class="flex flex-grow border-2 border-content-1 p-10"/>
                             </div>
-                            <div class="flex w-full h-52">
-                                <div class="flex flex-grow border-2 border-content-1 p-10"></div><div class="flex justify-center items-center border-2 border-content-1 p-10 word-main word"> For </div><div class="flex flex-grow border-2 border-content-1 p-10"></div><div class="flex justify-center items-center border-2 border-content-1 p-10 word-main word"> The </div>
+                            <div id="line" class="flex w-full h-52">
+                                <div class="flex flex-grow border-2 border-content-1 p-10"/><p class="flex justify-center items-center border-2 border-content-1 px-3 md:px-10 word-main word"> For </p><div class="flex flex-grow border-2 border-content-1 p-10"/><p class="flex justify-center items-center border-2 border-content-1 px-3 md:px-10 word-main word"> The </p>
                             </div>
-                            <div class="flex w-full h-52">
-                                <div class="flex justify-center items-center border-2 border-content-1 p-10 word-main word bg-accent-4 text-bg"> Creative </div><div class="flex flex-grow border-2 border-content-1 p-10"></div><div class="flex justify-center items-center border-2 border-content-1 p-10 word-main word"> Visionaries </div>
+                            <div id="line" class="flex w-full h-52">
+                                <p class="flex justify-center items-center border-2 border-content-1 px-3 md:px-10 word-main word bg-accent-4 text-bg"> Creative </p><div class="flex flex-grow border-2 border-content-1 p-3 md:p-10"/><p class="flex justify-center items-center border-2 border-content-1 px-3 md:px-10 word-main word"> Visionaries </p>
                             </div>
-
 						</div>
 					</div>
-				</div>
+				</main>
             </section>
+
             <section id="content-info" class="relative bg-bg h-screen w-screen border-2">
-                <div class="flex flex-col justify-center items-center p-10 md:p-20 h-full w-full">
-                    <div class="w-full flex flex-col justify-center items-center border-b-2 md:px-20 line gen-text">
-                        <div class="flex justify-center items-center py-4 text-2xl md:text-8xl word">Open Positions</div>
-                    </div>
-                    <div class="relative h-full w-full flex flex-col md:flex-row justify-around items-center gap-8 py-20">
+                <article class="flex flex-col justify-center items-center p-10 md:p-20 h-full w-full">
+                    <header class="w-full flex flex-col justify-center items-center border-b-2 md:px-20 line ">
+                        <p class="flex justify-center items-center py-4 text-4xl md:text-8xl word">Open Positions</p>
+                    </header>
+                    <main class="relative h-full w-full flex flex-col md:flex-row justify-around items-center gap-8 py-20">
                         <div data-open="false" class="card border-2 flex flex-col justify-between gap-4 p-10">
-                            <div id="position" class="flex justify-center text-4xl line gen-text"><div class="word">Digital Designer</div></div>
-                            <div class="description flex flex-col justify-center content-between text-md md:text-xl h-0 -z-10 gap-10">
-                                <div class="font-bold">
+                            <div id="position" class="flex justify-start text-4xl line "><h1 class="word">Digital Designer</h1></div>
+                            <article class="description flex flex-col justify-center content-between text-md md:text-xl h-0 -z-10 gap-10">
+                                <p class="font-bold">
                                     At Purus, we’re seeking creative and talented digital designers to join our team. You’ll be responsible for producing unique and effective digital content across various platforms and be proficient in numerous designing platforms. The ideal candidate will have a strong understanding of design principles, proficiency in design software, and a keen eye for detail. In addition, candidates must be collaborative, open to feedback, and adaptive to transformative design trends to create the best possible results.
-                                </div>
+                                </p>
                                 <div class="flex flex-col">
-                                    <div> Qualifications </div>
-                                    <div>
+                                    <h1> Qualifications </h1>
+                                    <p>
                                         Bachelor's degree in Graphic Design, Digital Media, or related field and a portfolio of past projects.
-
-                                    </div>
+                                    </p>
                                 </div>
-
-                            </div>
-                            <div id="blurb" class="flex justify-between h-16">
-                                <div class="text-xl md:text-3xl w-auto flex items-center line gen-text"><div class="word">To Enrich</div></div>
+                            </article>
+                            <aside id="blurb" class="flex justify-between h-16">
+                                <div class="text-xl md:text-3xl w-auto min-w-24 flex items-center line "><p class="word">To Enrich</p></div>
                                 <div class="h-0 md:h-auto bg-accent-2 w-40 rounded-full cursor-pointer ease-linear duration-100 hover:scale-125 active:scale-95">
-                                    <div class="flex justify-center items-center w-full h-full text-md md:text-xl text-bg"><div class="line gen-text pt-2"><div class="word">Read More</div></div></div>
+                                    <div class="flex justify-center items-center w-full h-full text-md md:text-xl text-bg"><div class="line "><p class="word">Read More</p></div></div>
                                 </div>
-                            </div>
+                            </aside>
                         </div>
                         <div data-open="false" class="card border-2 flex flex-col justify-between gap-4 p-10">
-                            <div id="position" class="flex justify-center text-4xl line gen-text"><div class="word">Software Developer</div></div>
-                            <div class="description flex flex-col justify-center content-between text-xl h-0 -z-10 gap-10">
-                                <div class="font-bold">
+                            <div id="position" class="flex justify-start text-4xl line "><h1 class="word">Software Developer</h1></div>
+                            <article class="description flex flex-col justify-center content-between text-xl h-0 -z-10 gap-10">
+                                <p class="font-bold">
                                     Software developers aim to code and maintain organizational note-taking software that satisfies the expectations of their users. This means that the ideal applicant must have a strong background knowledge of programming. Candidates must also test their programs before launching them on the website and be prepared to debug them if necessary. Furthermore, they must continually update the webpage to account for improved versions of Purus.
-                                </div>
+                                </p>
                                 <div class="flex flex-col">
-                                    <div> Qualifications </div>
-                                    <div>
+                                    <h1> Qualifications </h1>
+                                    <p>
                                         Bachelor’s degree in Computer Science, Information Technology, Engineering, or a related field.
-                                    </div>
+                                    </p>
                                 </div>
-
-                            </div>
-                            <div id="blurb" class="flex justify-between h-16">
-                                <div class="text-xl md:text-3xl w-auto flex items-center line gen-text"><div class="word">To Create</div></div>
-                                <div class="h-0 md:h-auto bg-accent-3 w-40 rounded-full ease-linear cursor-pointer duration-100 hover:scale-125 active:scale-95">
-                                    <div class="flex justify-center items-center w-full h-full text-md md:text-xl text-bg"><div class="line gen-text pt-2"><div class="word">Read More</div></div></div>
+            
+                            </article>
+                            <aside id="blurb" class="flex justify-between h-16">
+                                <div class="text-xl md:text-3xl w-auto min-w-24 flex items-center line "><p class="word">To Create</p></div>
+                                <div class="h-0 md:h-auto bg-accent-3 w-40  rounded-full ease-linear cursor-pointer duration-100 hover:scale-125 active:scale-95">
+                                    <div class="flex justify-center items-center w-full h-full text-md md:text-xl text-bg"><div class="line "><p class="word">Read More</p></div></div>
                                 </div>
-                            </div>
+                            </aside>
                         </div>
                         <div data-open="false" class="card border-2 flex flex-col justify-between gap-4 p-10 ">
-                            <div id="position" class="flex justify-center text-4xl line gen-text"><div class="word">Media Manager</div></div>
-                            <div class="description flex flex-col justify-center content-between text-xl h-0 -z-10 gap-10">
-                                <div class="font-bold">
+                            <div id="position" class="flex justify-start text-4xl line "><h1 class="word">Media Manager</h1></div>
+                            <article class="description flex flex-col justify-center content-between text-xl h-0 -z-10 gap-10">
+                                <p class="font-bold">
                                     Our social media managers seek to develop and implement a social media plan that aligns with the organization’s goals. The ideal applicant must have strong analytical skills, good content writing skills, and proficiency in social media. Candidates must identify target consumers while creating engaging content such as posts, videos, and images that resonate with the target audience and correspond with Purus’s main goal. Additionally, social media managers must monitor and analyze social media analytics to assess the effectiveness of their campaigns.
-                                </div>
+                                </p>
                                 <div class="flex flex-col">
-                                    <div> Qualifications </div>
-                                    <div>
+                                    <h1> Qualifications </h1>
+                                    <p>
                                         Bachelor's degree in journalism, communications, marketing, public relations, or related field.
-                                    </div>
+                                    </p>
                                 </div>
-
-                            </div>
-                            <div id="blurb" class="flex justify-between h-16">
-                                <div class="text-xl md:text-3xl w-auto flex items-center line gen-text"><div class="word">To Share</div></div>
+                            </article>
+                            <aside id="blurb" class="flex justify-between h-16">
+                                <div class="text-xl md:text-3xl w-auto min-w-24 flex items-center line "><p class="word">To Share</p></div>
                                 <div class="h-0 md:h-auto bg-accent-4 w-40 rounded-full ease-linear cursor-pointer duration-100 hover:scale-125 active:scale-95">
-                                    <div class="flex justify-center items-center w-full h-full text-md md:text-xl text-bg"><div class="line gen-text pt-2"><div class="word">Read More</div></div></div>
+                                    <div class="flex justify-center items-center w-full h-full text-md md:text-xl text-bg"><div class="line "><p class="word">Read More</p></div></div>
                                 </div>
-                            </div>
+                            </aside>
                         </div>
-                    </div>
-                </div>
+                    </main>
+                </article>
             </section>
+
+            <!-- <div data-open="false">
+                <PositionCard title="Digital Designer" color="bg-accent-2">
+                    <p class="font-bold" slot="description">
+                        At Purus, we’re seeking creative and talented digital designers to join our team. You’ll be responsible for producing unique and effective digital content across various platforms and be proficient in numerous designing platforms. The ideal candidate will have a strong understanding of design principles, proficiency in design software, and a keen eye for detail. In addition, candidates must be collaborative, open to feedback, and adaptive to transformative design trends to create the best possible results.
+                    </p>
+                    <p slot="qualification">
+                        Bachelor's degree in Graphic Design, Digital Media, or related field and a portfolio of past projects.
+                    </p>
+                    <h1 slot="tagLine">
+                        To Enrich
+                    </h1>
+                </PositionCard>
+            </div>
+            <div data-open="false">
+                <PositionCard title="Software Developer" color="bg-accent-3">
+                    <p class="font-bold" slot="description">
+                        Software developers aim to code and maintain organizational note-taking software that satisfies the expectations of their users. This means that the ideal applicant must have a strong background knowledge of programming. Candidates must also test their programs before launching them on the website and be prepared to debug them if necessary. Furthermore, they must continually update the webpage to account for improved versions of Purus.
+                    </p>
+                    <p slot="qualification">
+                        Bachelor’s degree in Computer Science, Information Technology, Engineering, or a related field.
+                    </p>
+                    <h1 slot="tagLine">
+                        To Create
+                    </h1>
+                </PositionCard>
+            </div>
+            <div data-open="false">
+                <PositionCard title="Media Manager" color="bg-accent-4">
+                    <p class="font-bold" slot="description">
+                        Our social media managers seek to develop and implement a social media plan that aligns with the organization’s goals. The ideal applicant must have strong analytical skills, good content writing skills, and proficiency in social media. Candidates must identify target consumers while creating engaging content such as posts, videos, and images that resonate with the target audience and correspond with Purus’s main goal. Additionally, social media managers must monitor and analyze social media analytics to assess the effectiveness of their campaigns.
+                    </p>
+                    <p slot="qualification">
+                        Bachelor's degree in journalism, communications, marketing, public relations, or related field.
+                    </p>
+                    <h1 slot="tagLine">
+                        To Share
+                    </h1>
+                </PositionCard>
+            </div> -->
+            
             <section id="content-form" class="relative bg-bg h-screen w-screen border-2"> 
                 <div class="flex flex-col justify-between items-center p-4 md:p-20 h-full">
-                    <div class="flex flex-col w-full">
+                    <main class="flex flex-col w-full">
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
-                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line gen-text"><div class="word">First Name</div></div>
+                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">First Name</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
                                 <input class="w-full h-full outline-none border-0" id="first-name" name="name" type="text" required="" placeholder="PLEASE ENTER YOUR FIRST NAME">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
-                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line gen-text"><div class="word">Last Name</div></div>
+                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Last Name</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
-                                <input class="w-full h-full outline-none border-0" id="first-name" name="name" type="text" required="" placeholder="PLEASE ENTER YOUR LAST NAME">
+                                <input class="w-full h-full outline-none border-0" id="last-name" name="name" type="text" required="" placeholder="PLEASE ENTER YOUR LAST NAME">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
-                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line gen-text"><div class="word">Email</div></div>
+                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Email</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
                                 <input class="w-full h-full outline-none border-0"id="email" name="email" type="email" required="" placeholder="PLEASE ENTER YOUR EMAIL">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
-                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line gen-text"><div class="word">Phone</div></div>
+                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Phone</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
                                 <input class="w-full h-full outline-none border-0"id="phone" name="phone" type="text" required="" placeholder="PLEASE ENTER YOUR PHONE NUMBER">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
-                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line gen-text"><div class="word">Position</div></div>
+                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Position</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
                                 <input class="w-full h-full outline-none border-0"id="position" name="position" type="text" required="" placeholder="PLEASE ENTER YOUR DESIRED POSITION">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full text-sm md:text-2xl">
-                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line gen-text"><div class="word">Resume</div></div>
+                            <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Resume</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
                                 <input id="resume-upload" class="hidden w-full" id="resume" name="resume" type="file" required="">
                                 <label id="resume-text" for="resume-upload" class="w-full cursor-pointer text-gray-400">CLICK TO UPLOAD RESUME</label>
                             </div>
-                        </div>
-
-                    </div>
-                    <div class="flex flex-grow justify-center items-end w-full h-full max-h-60 pt-12">
+                        </div>  
+                    </main>
+                    <footer class="flex flex-grow justify-center items-end w-full h-full max-h-60 pt-12">
                         <div class="flex jusitfy-center justify-center items-center border-2 border-content-1 rounded-full h-full w-full ease-linear cursor-pointer duration-100 hover:scale-105 active:scale-95">
                             <input type="submit" class="text-5xl" value="Submit Here">
                         </div>
-                    </div>
+                    </footer>
                 </div>
             </section>
+            
         </div>
+
+        <!-- <FormLine title = "First Name">
+            <input class="w-full h-full outline-none border-0" id="first-name" name="name" type="text" required="" placeholder="PLEASE ENTER YOUR FIRST NAME">
+        </FormLine>
+        <FormLine title = "Last Name">
+            <input class="w-full h-full outline-none border-0" id="last-name" name="name" type="text" required="" placeholder="PLEASE ENTER YOUR LAST NAME">
+        </FormLine>
+        <FormLine title = "Email">
+            <input class="w-full h-full outline-none border-0"id="email" name="email" type="email" required="" placeholder="PLEASE ENTER YOUR EMAIL">
+        </FormLine>
+        <FormLine title = "Phone">
+            <input class="w-full h-full outline-none border-0"id="phone`" name="phone" type="text" required="" placeholder="PLEASE ENTER YOUR PHONE NUMBER">
+        </FormLine>
+        <FormLine title = "Position">
+            <input class="w-full h-full outline-none border-0"id="position" name="position" type="text" required="" placeholder="PLEASE ENTER YOUR DESIRED POSITION">
+        </FormLine>
+        <FormLine title = "Resume">
+            <input id="resume-upload" class="hidden w-full" id="resume" name="resume" type="file" required="">
+            <label id="resume-text" for="resume-upload" class="w-full cursor-pointer text-gray-400">CLICK TO UPLOAD RESUME</label>
+        </FormLine> -->
+        
+
         <div id="page-extra" class="relative w-screen h-96 bg-gray-50 z-40">
             <div id="footer-main" class="w-full h-full">
                 <div class="flex justify-start ml-10 md:ml-0 md:justify-center items-center w-full h-full p-20">
@@ -212,24 +274,27 @@ import Layout from '../layouts/Layout.astro';
     });
     //Type Effect
     
-    let typeSplit = new SplitType('.gen-text', {
-      types: 'lines, words, chars',
-      tagName: 'span'
-    })
-    
-    gsap.from('.gen-text .word', {
-      y: '100%',
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power1.out',
-      stagger: 0.1,
-      
-      scrollTrigger: {
-        trigger: '.gen-text',
-        start: 'top center',
-        
-      }
-    })
+function setupSplits() {
+  const targets = gsap.utils.toArray(".word");
+  targets.forEach((target) => {
+    let SplitClient = new SplitType(target, { type: "words" });
+    let chars = SplitClient.chars; //an array of all the divs that wrap each character
+    gsap.from(chars, {
+		y: '100%',
+		opacity: 0,
+		duration: 0.5,
+		ease: 'power1.out',
+		stagger: 0.01,
+      	scrollTrigger: {
+			trigger: target,
+			start: "top 75%",
+			end: "bottom center",
+      	}
+    });
+  });
+}
+
+setupSplits();
     
     </script>
 <style>
@@ -261,7 +326,7 @@ import Layout from '../layouts/Layout.astro';
     .card[data-open="true"] .description{
         opacity: 1;
     }
-    .gen-text{
+    .{
     }
     .word{
         overflow: hidden;
@@ -277,7 +342,7 @@ import Layout from '../layouts/Layout.astro';
         font-size:4rem;
     }
     .word-main {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 500;
     }
     .word-sub {
@@ -290,7 +355,7 @@ import Layout from '../layouts/Layout.astro';
         height: 120vh;
     }
     @media (min-width: 768px){
-        .word-main {
+    .word-main {
         font-size: 8rem;
         font-weight: 500;
     }
