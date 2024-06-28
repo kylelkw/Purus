@@ -1,0 +1,24 @@
+---
+const{
+    title = await Astro.slots.render('title'),
+    subtitle = await Astro.slots.render('subtitle'),
+    tagline = await Astro.slots.render('tagline'),
+} = Astro.props;
+---
+<section data-speed="0" id="home-hero" class="parallax bg-gradient-to-b from-bg to-content-0 w-screen">
+    <div class="flex flex-col justify-center items-center h-screen">
+        <div class="absolute overflow flex left-0 top-0 justify-center bg-bg w-full h-auto border-b-2">
+            <div class="line opacity-0 md:opacity-100 gen-text flex flex-row gap-2 text-4xl justify-center items-center my-10">
+                <div class="word">Purify your life with PURUS</div>
+            </div>
+        </div>
+        <div class="flex h-full w-full justify-start items-end p-20">
+            <div class="flex flex-col justify-end gap-0 p-0 h-96">
+                <div class="flex gen-text text-5xl text-large">
+                    <div class="word">HELLO</div>
+                </div>
+                <div class="flex gen-text text-lg md:text-5xl md:px-9 gap-4 h-16"><div class="word">Welcome to PURUS — your personal organizer</div></div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+---
+interface Props {
+	title: string;
+    color: string;
+}
+
+const { title, color } = Astro.props;
+---
+
+<div class="card border-2 flex flex-col justify-between gap-4 p-10">
+    <div id="position" class="flex justify-center text-4xl line gen-text"><h1 class="word">{title}</h1></div>
+    <article class="description flex flex-col justify-center content-between text-md md:text-xl h-0 -z-10 gap-10">
+        <slot name="description"/>
+        <div class="flex flex-col">
+            <h1> Qualifications </h1>
+            <slot name="qualifications">
+        </div>
+    </article>
+    <aside id="blurb" class="flex justify-between h-16">
+        <div class="text-xl md:text-3xl w-auto flex items-center line gen-text"><p class="word"><slot name="tagLine"></p></div>
+        <div class:list={color} class="h-0 md:h-auto w-40 rounded-full cursor-pointer ease-linear duration-100 hover:scale-125 active:scale-95">
+            <div class="flex justify-center items-center w-full h-full text-md md:text-xl text-bg"><div class="line gen-text pt-2"><p class="word">Read More</p></div></div>
+        </div>
+    </aside>
+</div>
+
+
