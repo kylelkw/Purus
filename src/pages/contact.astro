@@ -183,7 +183,7 @@ import FormLine from '../components/FormLine.astro';
                         </div>  
                     </form>
                     <footer class="flex flex-grow justify-center items-end w-full h-full max-h-60 pt-12">
-                        <div class="flex jusitfy-center justify-center items-center border-2 border-content-1 rounded-full h-full w-full ease-linear cursor-pointer duration-100 hover:scale-105 active:scale-95">
+                        <div id="submit" class="flex jusitfy-center justify-center items-center border-2 border-content-1 rounded-full h-full w-full ease-linear cursor-pointer duration-100 hover:scale-105 active:scale-95">
                             <button type="submit" class="text-5xl"> Submit Here </button>
                         </div>
                     </footer>
@@ -240,7 +240,7 @@ import FormLine from '../components/FormLine.astro';
     </div>
 </Layout>
 <script>
-let submit = document.querySelector('button');
+let submit = document.getElementById('submit');
 let inputs = document.querySelectorAll('input');
 
 submit.addEventListener('click', () => {
