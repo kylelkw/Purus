@@ -141,9 +141,9 @@ import FormLine from '../components/FormLine.astro';
                 </PositionCard>
             </div> -->
             
-            <section id="content-form" class="relative bg-bg h-screen w-screen border-2"> 
+            <section class="relative bg-bg h-screen w-screen border-2"> 
                 <div class="flex flex-col justify-between items-center p-4 md:p-20 h-full">
-                    <main class="flex flex-col w-full">
+                    <form id="content-form" class="flex flex-col w-full">
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
                             <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">First Name</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
@@ -159,32 +159,32 @@ import FormLine from '../components/FormLine.astro';
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
                             <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Email</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
-                                <input class="w-full h-full outline-none border-0"id="email" name="email" type="email" required="" placeholder="PLEASE ENTER YOUR EMAIL">
+                                <input class="w-full h-full outline-none border-0" id="email" name="email" type="email" required="" placeholder="PLEASE ENTER YOUR EMAIL">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
                             <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Phone</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
-                                <input class="w-full h-full outline-none border-0"id="phone" name="phone" type="text" required="" placeholder="PLEASE ENTER YOUR PHONE NUMBER">
+                                <input class="w-full h-full outline-none border-0" id="phone" name="phone" type="text" required="" placeholder="PLEASE ENTER YOUR PHONE NUMBER">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full mb-12 text-sm md:text-2xl">
                             <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Position</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
-                                <input class="w-full h-full outline-none border-0"id="position" name="position" type="text" required="" placeholder="PLEASE ENTER YOUR DESIRED POSITION">
+                                <input class="w-full h-full outline-none border-0" id="position" name="position" type="text" required="" placeholder="PLEASE ENTER YOUR DESIRED POSITION">
                             </div>
                         </div>
                         <div class="flex justify center border-b-2 border-content-1 h-16 w-full text-sm md:text-2xl">
                             <div class="flex items-center w-3/12 h-full px-1 md:px-4 line "><h1 class="word">Resume</h1></div>
                             <div class="flex items-center w-10/12 h-full px-1 md:px-4">
-                                <input id="resume-upload" class="hidden w-full" id="resume" name="resume" type="file" required="">
-                                <label id="resume-text" for="resume-upload" class="w-full cursor-pointer text-gray-400">CLICK TO UPLOAD RESUME</label>
+                                <input id="resume" class="hidden w-full" id="resume" name="resume" type="file" required="">
+                                <label id="resume-text" for="resume" class="w-full cursor-pointer text-gray-400">CLICK TO UPLOAD RESUME</label>
                             </div>
                         </div>  
-                    </main>
+                    </form>
                     <footer class="flex flex-grow justify-center items-end w-full h-full max-h-60 pt-12">
                         <div class="flex jusitfy-center justify-center items-center border-2 border-content-1 rounded-full h-full w-full ease-linear cursor-pointer duration-100 hover:scale-105 active:scale-95">
-                            <input type="submit" class="text-5xl" value="Submit Here">
+                            <button type="submit" class="text-5xl"> Submit Here </button>
                         </div>
                     </footer>
                 </div>
@@ -239,6 +239,75 @@ import FormLine from '../components/FormLine.astro';
         </div>
     </div>
 </Layout>
+<script type="module">
+
+    // Import the functions you need from the SDKs you need
+  
+    import firebase from "firebase/compat/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+  
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  
+    // Your web app's Firebase configuration
+  
+    const firebaseConfig = {
+  
+      apiKey: "AIzaSyBXELFdzYDfZqmAbgl-uJHYhMG7wRBQfuA",
+  
+      authDomain: "fbla-nlc-ca44b.firebaseapp.com",
+  
+      databaseURL: "https://fbla-nlc-ca44b-default-rtdb.firebaseio.com",
+  
+      projectId: "fbla-nlc-ca44b",
+  
+      storageBucket: "fbla-nlc-ca44b.appspot.com",
+  
+      messagingSenderId: "529674143097",
+  
+      appId: "1:529674143097:web:17999d0bd5552101bfdba8"
+  
+    };
+  
+  
+    // Initialize Firebase
+  
+    firebase.initalizeApp(firebaseConfig);
+
+    var contactFormDB = firebase.database().ref('contact-form');
+    document.getElementById('contact-form').addEventListener("submit", submitForm)
+
+    function submitForm(e){
+        e.preventDefault();
+
+        var firstName = getElementVal('first-name');
+        var lastName = getElementVal('last-name');
+        var email = getElementVal('email');
+        var phone = getElementVal('phone');
+        var position = getElementVal('position');
+        var resume = getElementVal('resume-upload');
+        
+        saveMessages(firstName, lastName, email, phone, position, resume);
+    }
+    const saveMessages = {firstName, lastName, email, phone, position, resume} => {
+        var newContactForm = contactFormDB.push();
+        newContactForm.set({
+            firstName : firstName,
+            lastName : lastName,
+            email : email,
+            phone : phone,
+            position : position,
+            resume : resume,
+        });
+    }
+
+    const getElementVal = {id} => {
+        return document.getElementById(id).value;
+    } 
+  
+</script>
 <script>
     const actualBtn = document.getElementById('resume-upload');
 
