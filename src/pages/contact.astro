@@ -184,7 +184,7 @@ import FormLine from '../components/FormLine.astro';
                     </form>
                     <footer class="flex flex-grow justify-center items-end w-full h-full max-h-60 pt-12">
                         <div class="flex jusitfy-center justify-center items-center border-2 border-content-1 rounded-full h-full w-full ease-linear cursor-pointer duration-100 hover:scale-105 active:scale-95">
-                            <button type="submit" class="text-5xl"> Submit Here </button>
+                            <button type="submit" id="submit" class="text-5xl"> Submit Here </button>
                         </div>
                     </footer>
                 </div>
@@ -239,83 +239,25 @@ import FormLine from '../components/FormLine.astro';
         </div>
     </div>
 </Layout>
-<script type="module">
+<script>
+let submit = document.querySelector('button');
+let inputs = document.querySelectorAll('input');
 
-    // Import the functions you need from the SDKs you need
-  
-    import firebase from "firebase/compat/app";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  
-    // TODO: Add SDKs for Firebase products that you want to use
-  
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-  
-    // Your web app's Firebase configuration
-  
-    const firebaseConfig = {
-  
-      apiKey: "AIzaSyBXELFdzYDfZqmAbgl-uJHYhMG7wRBQfuA",
-  
-      authDomain: "fbla-nlc-ca44b.firebaseapp.com",
-  
-      databaseURL: "https://fbla-nlc-ca44b-default-rtdb.firebaseio.com",
-  
-      projectId: "fbla-nlc-ca44b",
-  
-      storageBucket: "fbla-nlc-ca44b.appspot.com",
-  
-      messagingSenderId: "529674143097",
-  
-      appId: "1:529674143097:web:17999d0bd5552101bfdba8"
-  
-    };
-  
-  
-    // Initialize Firebase
-  
-    firebase.initalizeApp(firebaseConfig);
-
-    var contactFormDB = firebase.database().ref('contact-form');
-    document.getElementById('contact-form').addEventListener("submit", submitForm)
-
-    function submitForm(e){
-        e.preventDefault();
-
-        var firstName = getElementVal('first-name');
-        var lastName = getElementVal('last-name');
-        var email = getElementVal('email');
-        var phone = getElementVal('phone');
-        var position = getElementVal('position');
-        var resume = getElementVal('resume-upload');
-        
-        saveMessages(firstName, lastName, email, phone, position, resume);
-    }
-    const saveMessages = {firstName, lastName, email, phone, position, resume} => {
-        var newContactForm = contactFormDB.push();
-        newContactForm.set({
-            firstName : firstName,
-            lastName : lastName,
-            email : email,
-            phone : phone,
-            position : position,
-            resume : resume,
-        });
-    }
-
-    const getElementVal = {id} => {
-        return document.getElementById(id).value;
-    } 
-  
+submit.addEventListener('click', () => {
+    inputs.forEach(input => input.value = '');
+});
 </script>
 <script>
-    const actualBtn = document.getElementById('resume-upload');
+const actualBtn = document.getElementById('resume-upload');
 
-    const fileChosen = document.getElementById('resume-text');
+const fileChosen = document.getElementById('resume-text');
 
-    actualBtn.addEventListener('change', function(){
-    fileChosen.textContent = this.files[0].name
+actualBtn.addEventListener('change', function(){
+    fileChosen.textContent = this.files[0].name;
 })
+
+
+
 </script>
 <script>
     const cards = document.querySelectorAll(".card");
