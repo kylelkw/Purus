@@ -248,13 +248,16 @@ submit.addEventListener('click', () => {
 });
 </script>
 <script>
-    const actualBtn = document.getElementById('resume-upload');
+const actualBtn = document.getElementById('resume-upload');
 
-    const fileChosen = document.getElementById('resume-text');
+const fileChosen = document.getElementById('resume-text');
 
-    actualBtn.addEventListener('change', function(){
-    fileChosen.textContent = this.files[0].name
+actualBtn.addEventListener('change', function(){
+    fileChosen.textContent = this.files[0].name;
 })
+
+
+
 </script>
 <script>
     const cards = document.querySelectorAll(".card");
